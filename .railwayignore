@@ -1,0 +1,6 @@
+build.bat
+server.exe
+*.exe
+.vscode/
+node_modules/
+CSV Files/
