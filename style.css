@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0b0b12;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.backdrop {
+  display: none;
+}
+
+.wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 20px 15px;
+  }
+}
+
+.hero {
+  margin: 0;
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  margin-top: 32px;
+  background-color: #11121a;
+  border: 1px solid #26283a;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  padding: 28px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+}
+
+.input {
+  width: 100%;
+  background-color: #0f1018;
+  border: 1px solid #26283a;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 20px 22px;
+  font-size: 17px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .input {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+}
+
+.input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.18);
+}
+
+.actions {
+  margin: 22px 0 16px 0;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 14px;
+  padding: 16px 22px;
+  font-weight: bold;
+  color: #0b0b12;
+  cursor: pointer;
+  background-color: #8b5cf6;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+  font-size: 14px;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  width: 30%;
+  min-width: 120px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    margin: 0 0 10px 0;
+    min-width: unset;
+  }
+}
+
+.btn:hover {
+  background-color: #7c3aed;
+  box-shadow: 0 16px 40px rgba(139, 92, 246, 0.45);
+}
+
+.results {
+  margin-top: 18px;
+  border: 1px solid #26283a;
+  border-radius: 14px;
+  padding: 22px;
+  background-color: #0f1018;
+  min-height: 200px;
+  text-align: left;
+}
+
+.results-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.word-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.word-definition {
+  color: #b6b8c6;
+  line-height: 1.7;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.suggestions-list li {
+  background-color: #161826;
+  border: 1px solid #26283a;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions-list li:hover {
+  background-color: #1b1f30;
+}
+
+@media (max-width: 768px) {
+  .suggestions-list li {
+    padding: 16px 18px;
+    font-size: 16px;
+  }
+}
+
+.page-title {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 10px 0 22px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 36px;
+  }
+}
+
+.label {
+  display: block;
+  color: white;
+  font-size: 14px;
+  margin: 0 0 8px 4px;
+  text-align: left;
+}
+
+footer {
+  margin: 42px 0 10px 0;
+  color: #b6b8c6;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer .divider {
+  height: 1px;
+  background-color: #26283a;
+  max-width: 720px;
+  margin: 14px auto 10px auto;
+  opacity: 0.6;
+  border-radius: 1px;
+}
+
+footer .copy {
+  color: #b6b8c6;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.backdrop {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 15px 10px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin: 5px 0 15px 0;
+  }
+
+  .card {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .input {
+    padding: 16px 18px;
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 14px 18px;
+    font-size: 13px;
+  }
+
+  .results {
+    padding: 18px;
+  }
+}
+
+.loading {
+  text-align: center;
+  color: #b6b8c6;
+}
+
+.not-found {
+  color: #b6b8c6;
+}
+
+.word-result {
+  margin-top: 10px;
+}
+
+.status-icon {
+  margin-right: 8px;
+}
+
+.status-icon.success {
+  color: #10b981;
+}
+
+.status-icon.error {
+  color: #ef4444;
+}
+
+.status-icon.info {
+  color: #3b82f6;
+}
